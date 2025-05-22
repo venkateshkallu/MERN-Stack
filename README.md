@@ -1,3 +1,4 @@
+HEAD
 <div align="center">
     <a href="https://www.idurarapp.com/">
   <img src="https://avatars.githubusercontent.com/u/50052356?s=200&v=4" width="128px" />
@@ -118,3 +119,7 @@ Dont forget to give a ⭐️ to this project ... Happy coding!
 ## License
 
 IDURAR is Free Open Source Released under the GNU Affero General Public License v3.0.
+
+# Idurur-dockerized
+Dockerized version of the Idurar open-source ERP/CRM app with CI/CD workflow.
+9b65b45a9c12421f5aadfbe41efb1be055146709
