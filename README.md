@@ -1,125 +1,84 @@
-HEAD
-<div align="center">
-    <a href="https://www.idurarapp.com/">
-  <img src="https://avatars.githubusercontent.com/u/50052356?s=200&v=4" width="128px" />
-    </a>
-    <h1>Open Source ERP / CRM Accounting Invoice Quote</h1>
-    <p align="center">
-        <p>IDURAR ERP CRM | Simple To Use</p>
-    </p>
-    
+## Idurur Dockerized
 
+> Unofficial Dockerized version of [Idurar ERP CRM](https://github.com/idurar/idurar-erp-crm) for educational and DevSecOps learning purposes.
+
+This project provides a Dockerized setup for the open-source [Idurar ERP CRM](https://github.com/idurar/idurar-erp-crm) application.  
+It includes Docker support, CI/CD workflows, and is designed for experimenting with containerization and security audits.
+
+---
+
+## Security & Source Warning
+
+- Always trust official builds from: [https://idurarapp.com](https://idurarapp.com)
+- Official repo: [https://github.com/idurar/idurar-erp-crm](https://github.com/idurar/idurar-erp-crm)
+- Do **NOT** run versions downloaded from unofficial GitHub repos in production. They may be **fake**, **modified**, or **malicious**.
+- This repository is for educational purposes only. Not affiliated with the official Idurar team.
+
+---
+
+### Features
+
+- Docker support (frontend & backend)
+- Docker Compose for full app orchestration
+- GitHub Actions CI/CD Workflow
+- DevSecOps tools integration ready (e.g., Trivy, SonarQube, etc.)
+
+---
+
+### Getting Started
+
+```bash
+# Clone this repo
+git clone https://github.com/venkateshkallu/Idurur-dockerized.git
+
+# Navigate to project
+cd Idurur-dockerized
+
+# Start Docker containers
+docker-compose up --build
 ```
- Give a Star ⭐️ & Fork to this project ... Happy coding! 🤩`
+
+```arduino
+Folder Structure
+
+Idurur-dockerized/
+├── backend/               → Node.js API
+├── frontend/              → React (Ant Design) UI
+├── docker-compose.yml     → Multi-container setup
+├── Dockerfile             → Backend Dockerfile
+├── .github/workflows/     → GitHub Actions for CI/CD
 ```
 
-IDURAR is Open Source ERP / CRM (Invoice / Quote / Accounting ) Based on Advanced Mern Stack (Node.js / Express.js / MongoDb / React.js ) with Ant Design (AntD) and Redux
+## Credits
+This project is built upon the amazing work of the Idurar team:
 
-</div>
+Official project: https://github.com/idurar/idurar-erp-crm
 
-**🚀 Self-hosted Entreprise Version** : [https://cloud.idurarapp.com](https://cloud.idurarapp.com)
+Original license: GNU Affero General Public License v3.0
 
+All ERP/CRM app features (Invoice, Customer, Quote, etc.) are developed by Idurar.
+This project only adds Dockerization, automation, and DevSecOps improvements.
 
-## ⚠️ SECURITY WARNING for Developers & Web Agencies & Blockchain Developer
+## Use Cases
+Learn Docker with a real-world full-stack app
 
-We’ve been made aware of scammer contacting developers or web agencies, asking them to develop and run malicious or altered versions of IDURAR software.
+Test CI/CD using GitHub Actions
 
-🚫 NEVER trust emails, messages, or DMs claiming to be from IDURAR unless they come from our official domain: **@idurarapp.com**  
-🚫 DO NOT run unknown versions of the app sent via email or third-party GitHub repositories.
+Experiment with security scanning (SCA, SAST tools)
 
-✅ Official GitHub Repo: [https://github.com/idurar/idurar-erp-crm](https://github.com/idurar/idurar-erp-crm)  
-✅ Official Website: [https://idurarapp.com](https://idurarapp.com)
+Practice DevOps & DevSecOps workflows
 
-🚨 WARNING: We have been informed that scammers are misusing this open-source project and falsely claiming to represent IDURAR.AI.
+### License
+This repository and the original Idurar code are licensed under:
 
-⚠️ Only trust official information, updates, and licenses from our official website: [https://idurarapp.com](https://idurarapp.com). and official github repo: https://github.com/idurar/idurar-erp-crm
-We do **not** auhorize any third party to sell, license, or represent our software or brand.
+GNU Affero General Public License v3.0
+See LICENSE for details.
 
-🚫 Never run versions of IDURAR downloaded from unofficial GitHub repositories.  
-These may be **fake**, **malicious**, or used to scam users.
+### Show Your Support
+If you found this helpful, please consider:
 
-✅ Stay safe. Verify the source and always contact us through our website if in doubt.
+- Starring this repo
 
-## Features :
+- Forking and experimenting
 
-Invoice Management
-
-Payment Management
-
-Quote Management
-
-Customer Management
-
-Ant Design Framework(AntD) 🐜
-
-Based on Mern Stack (Node.js / Express.js / MongoDb / React.js ) 👨‍💻
-
-### May i can use IDURAR for Commercial use :
-
-- Yes You can use IDURAR for free for personal or Commercial use.
-
-## Our Sponsors
-
-  <a href="https://m.do.co/c/4ead8370b905?ref=idurarapp.com">
-    <img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/PoweredByDO/DO_Powered_by_Badge_blue.svg" width="201px">
-  </a>
-
-#
-
-<img width="1403" alt="Open Source ERP CRM" src="https://github.com/idurar/idurar-erp-crm/assets/136928179/a6712286-7ca6-4822-8902-fb7523533ee8">
-
-## Free Open Source ERP / CRM App
-
-IDURAR is Open "Fair-Code" Source ERP / CRM (Invoice / Inventory / Accounting / HR) Based on Mern Stack (Node.js / Express.js / MongoDb / React.js ) with Ant Design (AntD) and Redux
-
-
-## Getting started
-
-1.[Clone the repository](INSTALLATION-INSTRUCTIONS.md#step-1-clone-the-repository)
-
-2.[Create Your MongoDB Account and Database Cluster](INSTALLATION-INSTRUCTIONS.md#Step-2-Create-Your-MongoDB-Account-and-Database-Cluster)
-
-3.[Edit the Environment File](INSTALLATION-INSTRUCTIONS.md#Step-3-Edit-the-Environment-File)
-
-4.[Update MongoDB URI](INSTALLATION-INSTRUCTIONS.md#Step-4-Update-MongoDB-URI)
-
-5.[Install Backend Dependencies](INSTALLATION-INSTRUCTIONS.md#Step-5-Install-Backend-Dependencies)
-
-6.[Run Setup Script](INSTALLATION-INSTRUCTIONS.md#Step-6-Run-Setup-Script)
-
-7.[Run the Backend Server](INSTALLATION-INSTRUCTIONS.md#Step-7-Run-the-Backend-Server)
-
-8.[Install Frontend Dependencies](INSTALLATION-INSTRUCTIONS.md#Step-8-Install-Frontend-Dependencies)
-
-9.[Run the Frontend Server](INSTALLATION-INSTRUCTIONS.md#Step-9-Run-the-Frontend-Server)
-
-## Contributing
-
-1.[How to contribute](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#how-to-contribute)
-
-2.[Reporting issues](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#reporting-issues)
-
-3.[Working on issues ](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#working-on-issues)
-
-4.[Submitting pull requests](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#submitting-pull-requests)
-
-5.[Commit Guidelines](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#commit-guidelines)
-
-6.[Coding Guidelines](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#coding-guidelines)
-
-7.[Questions](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#questions)
-
-
-## Show your support
-
-Dont forget to give a ⭐️ to this project ... Happy coding!
-
-**🚀 Self-hosted Entreprise Version** : [https://cloud.idurarapp.com](https://cloud.idurarapp.com)
-
-## License
-
-IDURAR is Free Open Source Released under the GNU Affero General Public License v3.0.
-
-# Idurur-dockerized
-Dockerized version of the Idurar open-source ERP/CRM app with CI/CD workflow.
-9b65b45a9c12421f5aadfbe41efb1be055146709
+- Sharing feedback
