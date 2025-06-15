@@ -2,22 +2,28 @@ name: Docker Build and Test
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: 🔍 Verify Docker & Docker Compose version
-        run: |
-          docker --version
-          docker compose version  # 👈 Use SPACE not hyphen
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-      - name: 🐳 Build containers with Docker Compose v2
-        run: docker compose build  # 👈 Again, space not hyphen
+      - name: Install Docker Compose (v2)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker-compose-plugin
+          docker compose version
+
+      - name: Build Docker Images
+        run: docker compose build
