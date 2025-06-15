@@ -27,11 +27,12 @@ jobs:
     needs: build
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: GitHub Repo Stats
-      uses: jgehrcke/github-repo-stats@v1.2.1
-      with:
-        ghtoken: ${{ secrets.GHRS_GITHUB_API_TOKEN }}
+      - name: GitHub Repo Stats
+        uses: jgehrcke/github-repo-stats@v1.4.2
+        with:
+          ghtoken: ${{ secrets.GHRS_GITHUB_API_TOKEN }}
+
 
