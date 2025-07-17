@@ -13,15 +13,61 @@
 - [Installation Instructions](INSTALLATION-INSTRUCTIONS.md)
 
 ## DevOps Learning Activity
-### .gitignore Update 
+### 1. .gitignore Update 
 
 **Usecase1** : .gitignore was very basic and need to be add with MERN Stack related ignorable configuartioin
 
 **Solution** : 
   - Generated `.gitignore` file using [toptal gitignore generator](https://www.toptal.com/developers/gitignore) for visualstudiocode,react,node
 
-**
+### 2. Dockerise Frontend and Backend
 
+### 3. Create Docker Compose for MongoDB
+
+### 4. Buid the Docker Image Locally 
+
+### 5. Buid the Docker Image with GitHub Actions and Push to GCR registery
+
+### 6. Run Application Locally 
+
+### 7. Run Application On AWS EC2
+
+## Security 
+
+### 8. Quality Gate or Code Quality Check with SonarQube
+
+### 9. Quality Gate or Code Quality Check with DeepSource
+
+### 10. Secrets Scan (open source tool)
+
+### 11. Vulnerability Scans with Dependence Track  to Create SBOM
+
+- https://dependencytrack.org/
+
+### 12. OWASP Top 10 Scan with Arachni
+
+- https://github.com/Arachni/arachni
+
+##  Observebility Instrumentation 
+
+### 13. Centralised Logging with ELK Stack 
+
+### 14. Monetering and Alterting () with prometheus , Grafana 
+
+### 15. Uptime and Application Status with Uptime Kuma
+
+- https://uptimekuma.org/install-uptime-kuma-docker/
+
+### 16. Tracing with Elastic APM or Jaeger
+
+- https://www.jaegertracing.io/
+
+
+
+medium blog , reddit 
+
+
+ 
 > Unofficial Dockerized version of [Idurar ERP CRM](https://github.com/idurar/idurar-erp-crm) for educational and DevSecOps learning purposes.
 
 This project provides a Dockerized setup for the open-source [Idurar ERP CRM](https://github.com/idurar/idurar-erp-crm) application.  
