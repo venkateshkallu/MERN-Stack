@@ -1,4 +1,26 @@
-## Idurur Dockerized
+# MERN Stack DevOps Pipeline 
+
+## 🙌 Acknowledgements
+
+- **Helped & Guided By:** [Jinna Balu](https://jinnabalu.com/)
+- **Forked From:** [Original Project Name](https://github.com/idurar/idurar-erp-crm)
+- **Purpose:**  
+  This project is built for **learning**, **experimentation**, and to **demonstrate DevOps capabilities**.  
+  Not intended for production use. 
+
+## Dev Machine Instructions 
+
+- [Installation Instructions](INSTALLATION-INSTRUCTIONS.md)
+
+## DevOps Learning Activity
+### .gitignore Update 
+
+**Usecase1** : .gitignore was very basic and need to be add with MERN Stack related ignorable configuartioin
+
+**Solution** : 
+  - Generated `.gitignore` file using [toptal gitignore generator](https://www.toptal.com/developers/gitignore) for visualstudiocode,react,node
+
+**
 
 > Unofficial Dockerized version of [Idurar ERP CRM](https://github.com/idurar/idurar-erp-crm) for educational and DevSecOps learning purposes.
 
@@ -82,3 +104,5 @@ If you found this helpful, please consider:
 - Forking and experimenting
 
 - Sharing feedback
+
+
