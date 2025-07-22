@@ -1,16 +1,31 @@
-FROM node:18-alpine
-
+# Build frontend
+FROM node:18-alpine AS frontend
 WORKDIR /app
+COPY frontend/package*.json ./
+RUN npm install
+COPY frontend/ .
+RUN npm run build
+
+# Build backend
+FROM node:18-alpine AS backend
+WORKDIR /app
+COPY backend/package*.json ./
+RUN npm install
+COPY backend/ .
+
+# Final image
+FROM node:18-alpine
+WORKDIR /app
+
+# Copy backend files
 COPY --from=backend /app /app
-COPY --from=frontend /frontend/dist /app/frontend-dist
 
-ENV NODE_ENV production
+# Copy frontend build into public folder or dist
+COPY --from=frontend /app/dist /app/frontend-dist
+
+ENV NODE_ENV=production
 EXPOSE 3000
-
-CMD [ "node", "server.js" ]
-
-
-
+CMD ["node", "server.js"]
 
 
 
@@ -44,3 +59,5 @@ CMD [ "node", "server.js" ]
 
 # # Run your app
 # CMD ["npm", "start"]
+
+# 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
