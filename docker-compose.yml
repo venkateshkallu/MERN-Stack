@@ -1,14 +1,25 @@
 version: '3.8'
 
 services:
+  mongo:
+    image: mongo:7.0
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongo_data:/data/db
+
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - "5000:5000"
+      - "5000:8888"
     environment:
-      MONGO_URI: mongodb://mongo:27017/idurar_crm_db
+      - DATABASE=mongodb://mongo:27017/idurar_crm_db
+      - JWT_SECRET=mysecretkey123
     depends_on:
       - mongo
 
@@ -18,13 +29,41 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:80"
-
-  mongo:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
+    depends_on:
+      - backend
 
 volumes:
   mongo_data:
+
+# services:
+#   backend:
+#     build:
+#       context: ./backend
+#       dockerfile: Dockerfile
+#     ports:
+#       - "5000:8888"
+#     environment:
+#      - DATABASE=mongodb://mongo:27017/idurar_crm_db
+#      - JWT_SECRET=mysecretkey123
+
+#     depends_on:
+#       - mongo
+
+#   frontend:
+#     build:
+#       context: ./frontend
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3000:80"
+#     depends_on:
+#       - backend
+
+#   mongo:
+#     image: mongo:latest
+#     ports:
+#       - "27017:27017"
+#     volumes:
+#       - mongo_data:/data/db
+
+# volumes:
+#   mongo_data:
