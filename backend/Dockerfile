@@ -1,20 +1,34 @@
-# Use Node.js base image
-FROM node:20-alpine
+FROM node:18
 
-# Set working directory
 WORKDIR /app
 
-# Copy all backend code
-COPY . .
-
-# Install dependencies
+COPY package*.json ./
 RUN npm install
 
-RUN npm install express
+COPY . .
 
+EXPOSE 8888
 
-# Run backend server
 CMD ["npm", "start"]
+
+
+# # Use Node.js base image
+# FROM node:20-alpine
+
+# # Set working directory
+# WORKDIR /app
+
+# # Copy all backend code
+# COPY . .
+
+# # Install dependencies
+# RUN npm install
+
+# RUN npm install express
+
+
+# # Run backend server
+# CMD ["npm", "start"]
 
 
 # # Use official Node.js image

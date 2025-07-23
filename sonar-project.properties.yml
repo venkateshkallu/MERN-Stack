@@ -1,0 +1,15 @@
+sonar.projectKey=mern-app
+sonar.projectName=MERN App
+sonar.projectVersion=1.0
+
+# Path to source directories
+sonar.sources=frontend/src,backend/src
+
+# Exclude node_modules and build artifacts
+sonar.exclusions=**/node_modules/**,**/build/**,**/dist/**
+
+# JavaScript/TypeScript coverage report
+sonar.javascript.lcov.reportPaths=frontend/coverage/lcov.info,backend/coverage/lcov.info
+
+# Encoding
+sonar.sourceEncoding=UTF-8
