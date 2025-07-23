@@ -1,24 +1,46 @@
-# Use Node.js base image
+# Use Node base image
 FROM node:20-alpine
 
 # Set working directory
 WORKDIR /app
 
-# Copy frontend code
+# Copy only package.json first (for layer caching)
+COPY package*.json ./
+
+# Install backend dependencies
+RUN npm install
+
+# Copy backend source code
 COPY . .
 
-# Install and build React app
-RUN npm install && npm run build
+# Expose port if needed
+EXPOSE 8888
 
-# Install serve (for static file hosting)
-RUN npm install -g serve
-
-RUN npm install react react-dom
-RUN npm install --save-dev vite
+# Start the backend
+CMD ["npm", "start"]
 
 
-# Serve the React app
-CMD ["serve", "-s", "dist", "-l", "80"]
+# # Use Node.js base image
+# FROM node:20-alpine
+
+# # Set working directory
+# WORKDIR /app
+
+# # Copy frontend code
+# COPY . .
+
+# # Install and build React app
+# RUN npm install && npm run build
+
+# # Install serve (for static file hosting)
+# RUN npm install -g serve
+
+# RUN npm install react react-dom
+# RUN npm install --save-dev vite
+
+
+# # Serve the React app
+# CMD ["serve", "-s", "dist", "-l", "80"]
 # # Build stage
 # FROM node:20-alpine as build
 # WORKDIR /usr/src/app
