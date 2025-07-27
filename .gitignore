@@ -182,3 +182,14 @@ google-cloud-cli-linux-x86_64.tar.gz
 google-cloud-cli-linux-x86_64.tar.gz
 google-cloud-sdk/platform/bundledpythonunix/lib/libpython3.12.a
 google-cloud-sdk/platform/bundledpythonunix/lib/libpython3.12.so
+
+
+# .gitignore
+*.key
+*.pem
+key.json
+sonar-project.properties
+.env
+__pycache__/
+google-cloud-sdk/
+tests/
